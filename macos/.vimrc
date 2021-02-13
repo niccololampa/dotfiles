@@ -1,4 +1,4 @@
-"NICCOLO LAMPA VIM CONFIG
+"NICCOLO LAMPA MAC VIM CONFIG
 
 "VIM GENRAL SETTINGS
   set nocompatible              " be iMproved, required. use vim defaults
@@ -142,7 +142,6 @@ filetype plugin indent on    "required insert after plugin install
   "must come after color scheme to make BG transparent
   highlight Normal guibg=NONE ctermbg=NONE
 
-
 "For vimdevicons
   set encoding=utf8
   set guifont=Hack\ Nerd\ Font\ 11
@@ -196,7 +195,6 @@ let g:jsx_ext_required = 0 "to allow .js for JSX plugins that require .jsx
   \   "*": ["remove_trailing_lines", "trim_whitespace"]
   \}
 
-
   let g:ale_javascript_eslint_suppress_eslintignore = 1
   let g:ale_sign_error = '✘'
   let g:ale_sign_warning = '⚠'
@@ -247,10 +245,6 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 let g:fzf_preview_window = 'right:60%'
-
-
-
-
 
 "CUSTOM KEY MAPPINGS
   "Hide/show nerdtree \n
