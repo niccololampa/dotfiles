@@ -24,6 +24,27 @@ font:
   # Point size
   size: 11.0
 
+cursor:
+  # Cursor style
+  style:
+    # Cursor shape
+    #
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Block
+
+    # Cursor blinking state
+    #
+    # Values for `blinking`:
+    #   - Never: Prevent the cursor from ever blinking
+    #   - Off: Disable blinking by default
+    #   - On: Enable blinking by default
+    #   - Always: Force the cursor to always blink
+    blinking: Always
+
+
 # Colors (Solarized Dark)
 colors:
   # Default colors
@@ -53,4 +74,7 @@ colors:
     cyan:    '0x93a1a1'
     white:   '0xfdf6e3'
 
+  cursor:
+    text: '0x181818'
+    cursor: '0xd8d8d8'
 
