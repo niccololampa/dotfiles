@@ -174,7 +174,7 @@ let g:jsx_ext_required = 0 "to allow .js for JSX plugins that require .jsx
   let g:ale_linters = {
   \   'javascript': ['eslint'],
   \   'typescript': ['tslint'],
-  \   'python' : ['flake8','pylint']
+  \   'python' : ['flake8']
   \}
 
   "let g:ale_python_pylint_options = '--load-plugins pylint_django'
@@ -186,7 +186,7 @@ let g:jsx_ext_required = 0 "to allow .js for JSX plugins that require .jsx
   \   "typescript": ["tslint", "prettier"],
   \   "typescriptreact": ["eslint", "prettier"],
   \   "go": ["gofmt"],
-  \   "python": ["remove_trailing_lines", "isort", "ale#fixers#generic_python#BreakUpLongLines", "yapf"],
+  \   "python": ["remove_trailing_lines", "isort", "ale#fixers#generic_python#BreakUpLongLines", "black"],
   \   "java": ["google_java_format"],
   \   "css": ["prettier"],
   \   "markdown": ["prettier"],
