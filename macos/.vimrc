@@ -165,9 +165,10 @@ filetype plugin indent on    "required insert after plugin install
 "vim-indent-guides settings
   let g:indent_guides_enable_on_vim_startup = 1 "enabling on startup
   "this is for nicco black background
-  "let g:indent_guides_auto_colors = 0 "custom color
-    "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=NONE   ctermbg=233
-    "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=NONE ctermbg=234
+  let g:indent_guides_auto_colors = 0 "custom color
+  "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=NONE   ctermbg=233
+  "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=NONE ctermbg=234
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=NONE ctermbg=0
 
 let g:jsx_ext_required = 0 "to allow .js for JSX plugins that require .jsx
 
