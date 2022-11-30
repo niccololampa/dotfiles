@@ -250,6 +250,10 @@ let g:fzf_colors =
 
 let g:fzf_preview_window = 'right:60%'
 
+"to make vim-git-gutter containing signs like ale errors/warnings, git changes
+"signs to have no color/same background as editor
+highlight clear SignColumn
+
 "CUSTOM KEY MAPPINGS
   "Hide/show nerdtree \n
   nnoremap <leader>n :NERDTreeToggle<CR>
