@@ -107,6 +107,7 @@ filetype plugin indent on    "required insert after plugin install
   let NERDTreeMinimalUI = 1 "Hide help text
   let g:NERDTreeAutoDeleteBuffer = 1
   let NERDTreeShowLineNumbers = 1
+  let NERDTreeShowHidden=1
   let NERDTreeDirArrows = 1
   "let NERDTreeQuitOnOpen = 1
   "Hide/show nerdtree \n
@@ -116,8 +117,8 @@ filetype plugin indent on    "required insert after plugin install
    if exists('g:loaded_webdevicons')
       call webdevicons#refresh()
     endif
-  "close vim if only nerdtree is open (comment out. Buggy closes all buffers when :bd)
-    " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+  "close vim if only nerdtree is open
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   "open nerdtree when no file is specified. plain vim, not vim .
   "autocmd StdinReadPre * let s:std_in=1
   "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -173,20 +174,19 @@ let g:jsx_ext_required = 0 "to allow .js for JSX plugins that require .jsx
 "ALE
   let g:ale_linters = {
   \   'javascript': ['eslint'],
-  \   'typescript': ['tslint'],
-  \   'python' : ['flake8','pylint']
+  \   'typescript': ['eslint'],
+  \   'python' : ['flake8']
   \}
 
-  "let g:ale_python_pylint_options = '--load-plugins pylint_django'
+  " \   "python": ["black", "isort"],
 
   let g:ale_fixers = {
-  \   'javascript': ['eslint'],
+  \   'javascript': ["eslint"],
   \   "json": ["eslint", "prettier"],
   \   "graphql": ["eslint", "prettier"],
-  \   "typescript": ["tslint", "prettier"],
+  \   "typescript": ["eslint", "prettier"],
   \   "typescriptreact": ["eslint", "prettier"],
   \   "go": ["gofmt"],
-  \   "python": ["remove_trailing_lines", "isort", "ale#fixers#generic_python#BreakUpLongLines", "yapf"],
   \   "java": ["google_java_format"],
   \   "css": ["prettier"],
   \   "markdown": ["prettier"],
@@ -208,6 +208,9 @@ let g:jsx_ext_required = 0 "to allow .js for JSX plugins that require .jsx
 
 "disable polyglot on typescript temporarily
  " let g:polyglot_disabled = ["typescript", "typescriptreact"]
+
+"to disable black single to double quotes replacement
+  let g:black_skip_string_normalization = 1
 
 "vim jsx pretty
   let g:vim_jsx_pretty_colorful_config = 1
