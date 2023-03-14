@@ -89,7 +89,8 @@
     Plug 'jparise/vim-graphql'        "GraphQL syntax
     Plug 'quramy/tsuquyomi' "provides TS omincompletyions, show location where symbol is referenced. navigation to symbol, display list of syntax and semantics error needs npm -g install typescript
     Plug 'tpope/vim-commentary' "easy commenting of code. type gc line. gcap for paragraph. Can be in visual mode as well. gcgc to uncomment.
-    Plug 'ycm-core/YouCompleteMe' "code completion engine for VIM. Needs additional MAC/ Linux setup to work. See Docs. Be sure to install npm nodejs mono-complete golang-go properly. Check if you want other languages. if yes insert in intall.py --all. Installed c#, go, javascript typescript. Also tern node_modules in YCM folder to be deleted(as of latest install)
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} "code completion for VIM. Replaced YCM.
+    "Plug 'ycm-core/YouCompleteMe' "code completion engine for VIM. Needs additional MAC/ Linux setup to work. See Docs. Be sure to install npm nodejs mono-complete golang-go properly. Check if you want other languages. if yes insert in intall.py --all. Installed c#, go, javascript typescript. Also tern node_modules in YCM folder to be deleted(as of latest install)
     Plug 'SirVer/ultisnips' "code snippets engine. Use with honza/vim-snippets. Check if you need config in relation to YouCompleteMe for tabbing
     Plug 'honza/vim-snippets' "FIXME code snippets source. PROBLEM  WORKING WITH YouCompleteMe snip does not load
     Plug 'nathanaelkane/vim-indent-guides' " visually displaying indent levels in Vim.
@@ -225,12 +226,12 @@ let g:jsx_ext_required = 0 "to allow .js for JSX plugins that require .jsx
 
 "YouCompleteMe settings
   "Start autocompletion after 4 chars
-  let g:ycm_min_num_of_chars_for_completion = 4
-  let g:ycm_min_num_identifier_candidate_chars = 4
-  let g:ycm_enable_diagnostic_highlighting = 0
-  "Don't show YCMs preview window
-  set completeopt-=preview
-  let g:ycm_add_preview_to_completeopt = 0
+  "let g:ycm_min_num_of_chars_for_completion = 4
+  "let g:ycm_min_num_identifier_candidate_chars = 4
+  "let g:ycm_enable_diagnostic_highlighting = 0
+  ""Don't show YCMs preview window
+  "set completeopt-=preview
+  "let g:ycm_add_preview_to_completeopt = 0
 
 " fzf settings
 let g:fzf_colors =
@@ -247,6 +248,13 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+"for coc
+augroup ReactFiletypes
+  autocmd!
+  autocmd BufRead,BufNewFile *.jsx set filetype=javascriptreact
+  autocmd BufRead,BufNewFile *.tsx set filetype=typescriptreact
+augroup END
 
 let g:fzf_preview_window = 'right:60%'
 
