@@ -32,12 +32,12 @@
   set splitright "always right when splitting horizontally
 
 "for backup when something vim crashes
-  set backup
-  set backupcopy=yes
-  set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-  set backupskip=/tmp/*,/private/tmp/*
-  set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-  set writebackup
+  " set backup
+  " set backupcopy=yes
+  " set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+  " set backupskip=/tmp/*,/private/tmp/*
+  " set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+  " set writebackup
 
 "cursor shape
   let &t_SI = "\<Esc>[6 q"
@@ -276,7 +276,7 @@ highlight clear SignColumn
   "remap for quick buffer switching
   nnoremap gb :Buffers<CR>
   "ag search fzf
-  " nnoremap <C-g> :Ag<Cr>
+  "nnoremap <C-g> :Ag<Cr>
 
   "rg search fzf
   nnoremap <C-g> :Rg<CR>
