@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/Users/niccololampa/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
     url = "https://github.com/svrana/neosolarized.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/niccololampa/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/niccololampa/.local/share/nvim/site/pack/packer/start/nvim-autopairs",

@@ -58,6 +58,7 @@ packer.startup(function(use)
   use 'onsails/lspkind-nvim' -- vscode-like pictograms in text dropdowns
 	use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+	use 'hrsh7th/cmp-nvim-lsp-signature-help' -- nvim help for functions param signature
   use 'hrsh7th/nvim-cmp' -- node completion Completion
 	use 'L3MON4D3/LuaSnip'-- snippet engine to make cmp.nvim work
 	--TODO: learn key bindings
