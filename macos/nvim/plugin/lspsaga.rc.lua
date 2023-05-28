@@ -26,14 +26,13 @@ vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
 vim.keymap.set('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
 -- can easily see refeferences ofvariable
 vim.keymap.set('n', 'gh', '<Cmd>Lspsaga lsp_finder<CR>', opts)
-vim.keymap.set('i', '<C->', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+-- for help on signature for example parameters of functions
+-- vim.keymap.set('i', '<C->', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 -- fast way to replace all text in the document.
 vim.keymap.set('n', 'gR', '<Cmd>Lspsaga rename<CR>', opts)
--- vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
 
 -- code action
 vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
-
 
 
 
