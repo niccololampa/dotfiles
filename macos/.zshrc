@@ -104,11 +104,41 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# MAC - FOR ANDROID DATA STUDIO
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# for fuzzy search
+[ -f ~/.fzf.zsh ]  && source ~/.fzf.zsh
+
+# for pyenv
+eval "$(pyenv init --path)"
+
+# for nvm node versioning using brew
+# export NVM_DIR=~/.nvm
+# source $(brew --prefix nvm)/nvm.sh
+
+# nvm appended by nvm install script
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source ~/.nvm/nvm.sh
+
+# for bonjoro
+export GITHUB_TOKEN=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
+
+# for composer and valet
+export PATH=$PATH:~/.composer/vendor/bin
+
+# DBngin exports mysqql
+export PATH=/Users/Shared/DBngin/mysql/8.0.27/bin:$PATH
+
+# for pyenv
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+
+#for php8.0
+export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
+
+#for pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+#alis vim to nvim
+alias vim="nvim"
