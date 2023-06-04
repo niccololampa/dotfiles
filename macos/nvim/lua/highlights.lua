@@ -12,3 +12,14 @@ vim.cmd [[
   au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=100})
   augroup END
 ]]
+
+-- hide cursorline highlight when in another buffer
+vim.cmd([[
+augroup CursorLine
+    autocmd!
+    autocmd VimEnter * setlocal cursorline
+    autocmd WinEnter * setlocal cursorline
+    autocmd BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+augroup END
+]])
