@@ -2,7 +2,7 @@ local status, n = pcall(require, "neosolarized")
 if (not status) then return end
 
 n.setup({
-  comment_italics = true,
+	comment_italics = true,
 })
 
 local cb = require('colorbuddy.init')
@@ -15,6 +15,7 @@ local styles = cb.styles
 Color.new('white', '#ffffff')
 Color.new('black', '#000000')
 Group.new('Normal', colors.base1, colors.NONE, styles.NONE)
+-- removed to show the line highlight added the one below it
 -- Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
 Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
 Group.new('Visual', colors.none, colors.base03, styles.reverse)
