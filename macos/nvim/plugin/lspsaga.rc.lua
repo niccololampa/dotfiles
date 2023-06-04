@@ -17,7 +17,7 @@ saga.setup({
 local diagnostic = require("lspsaga.diagnostic")
 local opts = { noremap = true, silent = true }
 -- go to next error
-vim.keymap.set('n', '<C-u>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+vim.keymap.set('n', '<C-y>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 --see error for line in dropdown
 vim.keymap.set('n', 'gl', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
 -- for more information on variable. Will see in dropdown
