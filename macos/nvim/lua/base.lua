@@ -31,7 +31,7 @@ vim.opt.laststatus = 2       --alwasy show the status bar
 vim.opt.scrolloff = 10       -- center cursor when scrolling
 vim.opt.inccommand = 'split' --allows to see realtime results of :s / and ?
 vim.opt.breakindent = true   --wrapped lines have the same indent as original line
-vim.opt.wrap = false         -- No Wrap lines
+-- vim.opt.wrap = false         -- No Wrap lines
 
 -- Undercurl contorols the apperance in visual mode
 -- vim.cmd([[let &t_Cs = "\e[4:3m"]])
